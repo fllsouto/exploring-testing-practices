@@ -1,0 +1,34 @@
+# MSR X-Ray notebook dependencies — Python 3.14.3
+
+# Jupyter runtime
+jupyterlab>=4.2
+notebook>=7.2          # provides the classic `jupyter notebook` launcher
+ipykernel>=6.29
+nbformat>=5.10
+
+# MSR / git
+pydriller>=2.7
+gitpython>=3.1
+tqdm>=4.66             # progress bars for long git walks
+
+# Data
+pandas>=2.2
+numpy>=2.0
+
+# Classic charts
+matplotlib>=3.9
+seaborn>=0.13
+
+# Interactive / extra viz
+plotly>=5.24
+networkx>=3.3
+squarify>=0.4
+wordcloud>=1.9
+
+# Static analysis
+radon>=6.0
+lizard>=1.17
+bandit>=1.7
+
+# Manifest parsing
+toml>=0.10

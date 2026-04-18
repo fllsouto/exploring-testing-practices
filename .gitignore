@@ -1,0 +1,58 @@
+# Python venv (managed by uv / asdf — recreate with `make setup`)
+.venv/
+venv/
+env/
+
+# Python bytecode + caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.jupyter/
+jupyter_runtime/
+
+# Notebook output artefacts (commit clean notebooks; nbconvert output is ephemeral)
+notebooks/*.html
+notebooks/*.pdf
+notebooks/_exported/
+notebooks/executed-*.ipynb
+
+# Cloned target repos used for the MSR analysis (can be recloned from REPO_URL).
+# Ignore every subdirectory of notebooks/ by default, then allow back the ones
+# we actually want tracked (images, etc.).
+notebooks/*/
+!notebooks/images/
+!notebooks/images/**
+
+# MSR scratch — the `repo/` dir is a clone target; contents are not ours
+repo/*
+!repo/.gitkeep
+
+# Analysis side-effects
+*.log
+*.prof
+htmlcov/
+.coverage
+.coverage.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets — never commit
+.env
+.env.local
+*.pem
+CLAUDE.md
